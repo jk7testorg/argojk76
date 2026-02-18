@@ -10,6 +10,7 @@ metadata:
     argocd/app-name: argojk76
     # argocd/app-selector: app.kubernetes.io/instance=argojk76
     argocd/instance-name: default
+    backstage.io/kubernetes-id: argojk76
 
 spec:
   type: service
