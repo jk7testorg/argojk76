@@ -2,6 +2,8 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: ${APP_NAME}
+  labels:
+    backstage.io/kubernetes-id: ${{values.app_name}}
 spec:
   replicas: 1
   selector:
@@ -17,4 +19,5 @@ spec:
           image: ${DOCKER_IMAGE}
           imagePullPolicy: Always
           # ports:
+
           #   - containerPort: 3000
